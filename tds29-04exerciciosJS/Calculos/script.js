@@ -1,18 +1,65 @@
-function somar(){
-    var numero1 = document.getElementById("n1").valueAsNumber
-    var numero2 = document.getElementById("n2").valueAsNumber
-    var res = document.getElementById("res")
-    res.textContent = numero1 + numero2
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="../calculos/">Cálculos</a>
+        <a href="../calculadoraGPT/">Calculadora GPT</a>
+        <a href="../calcMedia/">Média</a>
+        <a href="../bootstrap5/">Bootstrap 5</a>
+    </nav>
 
-function dividir(){
-    var n3 = parseFloat(document.getElementById(n3).value)
-    var n4 = parseFloat(document.getElementById(n4).value)
-    var resp = document.getElementById("respDiv")
+    <h1>Cálculos</h1>
 
-    if(n4 !==0){
-        resp.textContent = n3/n4
-    }else{
-        resp.textContent = "Não se divide por 0"
-    }
-}
+<main>
+    <div>
+        <h2>SOMA</h2>
+        <label for="n1">Primeiro número</label>
+        <input type="number" id="n1">
+        <label for="n2">Segundo número</label>
+        <input type="number" id="n2">
+        <button onclick="somar()">SOMAR</button>
+        <p id="resposta"></p>
+    </div>
+
+    <div>
+        <h2>DIVISÃO</h2>
+        <label for="n3">Primeiro número</label>
+        <input type="number" id="n3">
+        <label for="n4">Segundo número</label>
+        <input type="number" id="n4">
+        <button onclick="dividir()">DIVIDIR</button>
+        <p id="respDiv"></p>
+    </div>
+
+    <div>
+        <h2>MULTIPLICAÇÃO</h2>
+        <label for="n5">Primeiro número</label>
+        <input type="number" id="n5">
+        <label for="n6">Segundo número</label>
+        <input type="number" id="n6">
+        <button onclick="mult()">MULTIPLICAR</button>
+        <p id="respMult"></p>
+    </div>
+
+    <div>
+        <h2>SUBTRAÇÃO</h2>
+        <label for="n7">Primeiro número</label>
+        <input type="number" id="n7">
+        <label for="n8">Segundo número</label>
+        <input type="number" id="n8">
+        <button onclick="sub()">SUBTRAIR</button>
+        <p id="respSub"></p>
+    </div>
+</main>
+    <script src="script.js"></script>
+</body>
+</html>
